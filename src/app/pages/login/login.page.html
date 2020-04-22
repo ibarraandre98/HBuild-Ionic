@@ -1,0 +1,19 @@
+
+<ion-content class="ion-padding">
+  <div class="center ion-padding">
+    <div class="img-center ion-margin-bottom">
+      <img src="../../assets/logo.png" alt="Logo">
+    </div>
+    
+    <form (submit)="onLogin()">
+      <ion-input required class="ion-margin-bottom ion-padding-start" type="email" placeholder="Correo Electronico"></ion-input>
+      <ion-input required class="ion-margin-bottom ion-padding-start" type="password" placeholder="Contraseña"></ion-input>
+      <ion-button type="submit" expand="full" class="ion-margin-bottom">Iniciar Sesión</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border ion-padding bg-white">
+  <p class="ion-text-center">¿No tienes una cuenta?</p>
+  <p class="ion-text-center"><a routerLink="/register">Crea una cuenta</a></p>
+</ion-footer>

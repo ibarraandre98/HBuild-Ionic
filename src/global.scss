@@ -24,3 +24,11 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-input[type="text"],
+ion-input[type="email"],
+ion-input[type="password"]
+{
+    display: block;
+    border: 1px solid rgba(139, 139, 139, 0.5);
+}

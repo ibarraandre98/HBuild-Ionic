@@ -1,0 +1,25 @@
+.center{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    .img-center{
+        display: flex;
+        justify-content: center;
+        img{
+            max-width: 40%;
+        }
+    }
+  }
+
+  .bg-white{
+      p{
+        color: #8b8b8b;
+      }
+      a{
+          text-decoration: none;
+      }
+      background-color: white;
+  }
