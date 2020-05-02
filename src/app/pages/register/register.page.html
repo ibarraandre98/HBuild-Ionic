@@ -1,21 +1,48 @@
-
 <ion-content class="ion-padding">
-  <div class="center ion-padding">
-    <div class="img-center ion-margin-bottom">
-      <img src="../../assets/logo.png" alt="">
+    <div class="center ion-padding">
+        <div class="img-center ion-margin-bottom">
+            <img src="../../assets/logo.png" alt="">
+        </div>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmitCorreo()">
+            <div class="ion-margin-bottom">
+                <ion-input class="ion-padding-start" formControlName="nombre" type="text" placeholder="Nombre Completo"></ion-input>
+                <div *ngFor="let error of errorMessages.nombre">
+                    <ng-container *ngIf="nombre.hasError(error.type) && (nombre.dirty || nombre.touched)">
+                        <small class="error-message ion-padding-start">{{error.message}}</small>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="ion-margin-bottom">
+                <ion-input class="ion-padding-start" formControlName="correo" type="email" placeholder="Correo Electronico"></ion-input>
+                <div *ngFor="let error of errorMessages.correo">
+                    <ng-container *ngIf="correo.hasError(error.type) && (correo.dirty || correo.touched)">
+                        <small class="error-message ion-padding-start">{{error.message}}</small>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="ion-margin-bottom">
+                <ion-input class="ion-padding-start" formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+                <div *ngFor="let error of errorMessages.password">
+                    <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+                        <small class="error-message ion-padding-start">{{error.message}}</small>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="ion-margin-bottom">
+                <ion-input class="ion-padding-start" formControlName="cpassword" type="password" placeholder="Confirmar Contraseña"></ion-input>
+                <div *ngFor="let error of errorMessages.cpassword">
+                    <ng-container *ngIf="cpassword.hasError(error.type) && (cpassword.dirty || cpassword.touched)">
+                        <small class="error-message ion-padding-start">{{error.message}}</small>
+                    </ng-container>
+                </div>
+            </div>
+            <ion-button [disabled]="!registerForm.valid" type="submit" expand="full" class="ion-margin-bottom">Registrarse</ion-button>
+        </form>
     </div>
-    
-    <form (submit)="onRegister()">
-      <ion-input class="ion-margin-bottom ion-padding-start" type="text" placeholder="Nombre Completo"></ion-input>
-      <ion-input class="ion-margin-bottom ion-padding-start" type="email" placeholder="Correo Electronico"></ion-input>
-      <ion-input class="ion-margin-bottom ion-padding-start" type="password" placeholder="Contraseña"></ion-input>
-      <ion-input class="ion-margin-bottom ion-padding-start" type="password" placeholder="Confirmar Contraseña"></ion-input>
-      <ion-button type="submit" expand="full" routerLink="/register" class="ion-margin-bottom">Registrarse</ion-button>
-    </form>
-  </div>
 </ion-content>
 
 <ion-footer class="ion-no-border ion-padding bg-white">
-  <p class="ion-text-center">¿Ya tienes una cuenta?</p>
-  <p class="ion-text-center"><a routerLink="/login">Inicia sesión</a></p>
+    <p class="ion-text-center">¿Ya tienes una cuenta?</p>
+    <p class="ion-text-center"><a routerLink="/login">Inicia sesión</a></p>
 </ion-footer>
