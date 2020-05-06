@@ -1,0 +1,28 @@
+.color-header {
+    --background: rgb(255, 102, 0);
+    --color: white;
+    text-align: center;
+}
+.sk-title{
+    color:  rgb(255, 102, 0);
+}
+.my-custom-menu {
+    --width: 500px;
+}
+.hbuldlogo{
+    width: 20px; height: 20px;
+}
+.textoCentro {
+    text-align: center;
+    color: black;
+}
+
+ion-item:hover {
+    --background: rgb(255, 102, 0);
+    color: white;
+    --ion-icon-color: red;
+}
+
+ion-item:hover ion-icon {
+    color: white;
+}

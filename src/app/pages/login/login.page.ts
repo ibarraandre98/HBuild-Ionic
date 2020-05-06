@@ -1,7 +1,7 @@
 import { AuthService } from './../../services/auth.service';
 import { FormBuilder,Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,6 +16,7 @@ export class LoginPage implements OnInit {
   constructor(
     private formBuilder:FormBuilder,
     private authService:AuthService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -40,7 +41,8 @@ export class LoginPage implements OnInit {
   }
 
   onLogin(){
-    console.log("login");
+    this.router.navigate(['/menu']);
+    console.log("login");/*
     let correo = this.loginForm.value.correo;
     let password = this.loginForm.value.password;
     this.authService.signIn(correo,password)
@@ -55,6 +57,7 @@ export class LoginPage implements OnInit {
     .catch(error =>{
       console.log(error);
     });
-  }
+  }*/
 
+}
 }
