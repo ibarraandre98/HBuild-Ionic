@@ -18,11 +18,11 @@
 }
 
 ion-item:hover {
-    --background: rgb(255, 102, 0);
+    --background: #eaeaea;
     color: white;
-    --ion-icon-color: red;
 }
 
-ion-item:hover ion-icon {
-    color: white;
+
+.gray{
+    color: #8b8b8b;
 }

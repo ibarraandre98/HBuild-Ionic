@@ -20,6 +20,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { MenuComponent } from './components/menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent,MenuComponent],
   entryComponents: [],
@@ -32,6 +33,7 @@ import { MenuComponent } from './components/menu/menu.component';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,

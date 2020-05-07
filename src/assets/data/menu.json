@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "notifications-outline",
+        "name": "Notificaciones",
+        "href": "/"
+    },
+    {
+        "icon": "person-outline",
+        "name": "Cuenta",
+        "href": "/"
+    },
+    {
+        "icon": "lock-closed-outline",
+        "name": "Privacidad",
+        "href": "/"
+    },
+    {
+        "icon": "log-out-outline",
+        "name": "Cerrar Sesión",
+        "href": "/"
+    }
+]
