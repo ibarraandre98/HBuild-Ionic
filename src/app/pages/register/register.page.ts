@@ -1,8 +1,10 @@
+import { Toast } from '../../models/toast';
 import { User } from './../../models/user';
 import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import { ToastController, AlertController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -25,12 +27,19 @@ export class RegisterPage implements OnInit {
   });
   user:User;
 
+
   constructor(
     private authService:AuthService,
     private formBuilder:FormBuilder,
     private router:Router,
-  ){}
+    private alerts:Toast,
+    private menuController:MenuController,
+  )
+  {
+    this.menuController.enable(false);
+  }
 
+  
   get nombre(){
     return this.registerForm.get('nombre');
   }
@@ -71,10 +80,9 @@ export class RegisterPage implements OnInit {
     let correo = this.registerForm.value.correo;
     let isEmailAvailable = await this.authService.isEmailAvailable(correo);
     if(!isEmailAvailable){
-      alert('Este correo electronico ya está en uso');
+      this.alerts.toast('Error','Este correo electronico ya está en uso');
       return;
     }
-
     this.onRegister();
   }
 
@@ -92,6 +100,8 @@ export class RegisterPage implements OnInit {
       this.authService.addUser(user)
       .then(result =>{
         console.log(result);
+        this.alerts.toast('Exito','Usuario registrado con éxito');
+        this.router.navigate(['/home']);
       });
     });
   }

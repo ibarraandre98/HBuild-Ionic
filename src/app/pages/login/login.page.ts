@@ -1,7 +1,10 @@
+import { Toast } from './../../models/toast';
 import { AuthService } from './../../services/auth.service';
 import { FormBuilder,Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {MenuController} from '@ionic/angular';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,8 +19,13 @@ export class LoginPage implements OnInit {
   constructor(
     private formBuilder:FormBuilder,
     private authService:AuthService,
-    private router:Router
-  ) { }
+    private router:Router,
+    private menuController:MenuController,
+    private alerts:Toast,
+  ) 
+  { 
+    this.menuController.enable(false);
+  }
 
   ngOnInit() {
   }
@@ -42,7 +50,6 @@ export class LoginPage implements OnInit {
 
   onLogin(){
     this.router.navigate(['/menu']);
-    console.log("login");/*
     let correo = this.loginForm.value.correo;
     let password = this.loginForm.value.password;
     this.authService.signIn(correo,password)
@@ -52,12 +59,11 @@ export class LoginPage implements OnInit {
       this.authService.getCurrentUser(uid)
       .subscribe(result =>{
         console.log(result);
+        this.alerts.toast('Exito','Ha iniciado sesión con exito');
       });
     })
     .catch(error =>{
       console.log(error);
     });
-  }*/
-
-}
+  }
 }

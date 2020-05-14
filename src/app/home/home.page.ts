@@ -1,3 +1,4 @@
+import { MenuController } from '@ionic/angular';
 import { AuthService } from './../services/auth.service';
 import { Component } from '@angular/core';
 
@@ -10,5 +11,9 @@ export class HomePage {
 
   constructor(
     private authService:AuthService,
-  ) {}
+    private menuController:MenuController,
+  )
+  {
+    this.menuController.enable(false);
+  }
 }
