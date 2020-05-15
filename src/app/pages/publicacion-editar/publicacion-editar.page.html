@@ -6,6 +6,36 @@
 </ion-header> -->
 
 <ion-content>
+
+  <div style="margin: 10px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size=2>
+          <ion-buttons (click)="salirSinArgumentos()">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-label>
+            <p style="text-align: center; font-weight: bold;">Editar publicación</p>
+          </ion-label>
+        </ion-col>
+        <ion-col size=2>
+          <ion-buttons>
+            <ion-label>
+              <p style="color: rgb(255, 102, 0); text-align: right;">Guardar</p>
+            </ion-label>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+
+
+  </div>
+
   <ion-list>
 
     <div>
@@ -19,20 +49,13 @@
           </ion-col>
           <ion-col size=8>
             <ion-label>
-              <p class="Texto1">Osiel Treto</p>
-              <p class="Texto2">28/03/20</p>
+              <p class="Texto1">Filiberto Salazar</p>
             </ion-label>
           </ion-col>
-          <ion-col>
-            <ion-buttons>
-              <ion-button (click)="mostrarPop( $event )">
-                <ion-icon style="color: gray; margin-top: 5px;" slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical">
-                </ion-icon>
-              </ion-button>
-            </ion-buttons>
-          </ion-col>
+
         </ion-row>
         <ion-label>
+          <p class="titulo">Mansion de 3 pisos de cristal</p>
           <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,
             deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt
             libero cupiditate voluptatum impedit sequi dolor?</p>
@@ -40,27 +63,17 @@
         <ion-img style="margin-left:-5px; margin-right: -5px;"
           src="https://planosdecasasmodernas.com/wp-content/uploads/2017/06/Casa-minimalista-fachada-una-planta.jpg">
         </ion-img>
-        <ion-row>
-          <ion-col>
-            <ion-icon style="margin-left: 10px;" name="heart-outline"></ion-icon>
-          </ion-col>
-          <ion-col>
-            <ion-label>
-              <p>9</p>
-            </ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-icon name="chatbox-outline" (click)="comentarios($event)"></ion-icon>
-          </ion-col>
-          <ion-col>
-            <ion-label>
-              <p>9</p>
-            </ion-label>
-          </ion-col>
-          <ion-col size=8></ion-col>
-        </ion-row>
+
       </ion-grid>
     </div>
-
   </ion-list>
 </ion-content>
+
+<ion-footer class="ion-no-border comentarios">
+  <ion-toolbar>
+    <ion-label slot="end">
+      <p style="margin-right: 10px;">Editar foto</p>
+    </ion-label>
+    <ion-icon slot="end" name="image"></ion-icon>
+  </ion-toolbar>
+</ion-footer>

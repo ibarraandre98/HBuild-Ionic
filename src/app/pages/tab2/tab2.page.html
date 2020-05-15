@@ -3,5 +3,21 @@
 </ion-header> -->
 
 <ion-content>
-    <h1>Soy el tab 2</h1>
+    <ion-tabs>
+
+        <ion-tab-bar slot="top">
+            <ion-tab-button tap="personas">
+                <ion-icon name="person"></ion-icon>
+                <ion-label>
+                    <p>Personas</p>
+                </ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tap="publicaciones">
+                <ion-label>
+                    <p>Publicaciones</p>
+                </ion-label>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
 </ion-content>

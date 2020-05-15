@@ -1,0 +1,39 @@
+.usuario {
+    margin-left: 10px;
+}
+
+.Texto1 {
+    margin-top: 5px;
+    font-weight: bold;
+    padding-left: 8px;
+    color: black;
+}
+
+.Texto2 {
+    margin-left: 8px;
+}
+
+.titulo{
+    margin: 8px;
+    
+    font-weight: bold;
+    font-size: 20px;
+}
+.descripcion {
+    padding-left: 8px;
+    padding-bottom: 5px;
+}
+
+.comentarios {
+    padding: 5px;
+   
+
+}
+
+.comentar {
+    border-style: solid;
+    border-radius: 9px;
+    border-color: rgb(155, 155, 155);
+    border-width: 1px 1px;
+    /* 5px top and bottom, 20px on the sides */
+}

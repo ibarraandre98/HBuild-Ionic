@@ -22,6 +22,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ComponentsModule } from './components/components.module';
+
 
 
 @NgModule({
