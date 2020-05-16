@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button text=""></ion-back-button>
+        </ion-buttons>
+        <ion-title text-left>Cuenta</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <div class="items-cuenta" routerLink="/cuenta-correo">
+        <p>Correo electrónico</p>
+        <p class="text-gray">sk8muski@gmail.com</p>
+    </div>
+    <div class="items-cuenta" routerLink="/cuenta-contrasena">
+        <p>Contraseña</p>
+        <p class="text-gray">****************</p>
+    </div>
+</ion-content>

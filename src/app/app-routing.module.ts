@@ -23,6 +23,27 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'first-login',
+    loadChildren: () => import('./pages/first-login/first-login.module').then( m => m.FirstLoginPageModule)
+  },
+  {
+    path: 'cuenta',
+    loadChildren: () => import('./pages/cuenta/cuenta.module').then( m => m.CuentaPageModule)
+  },
+  {
+    path: 'cuenta-correo',
+    loadChildren: () => import('./pages/cuenta-correo/cuenta-correo.module').then( m => m.CuentaCorreoPageModule)
+  },
+  {
+    path: 'cuenta-contrasena',
+    loadChildren: () => import('./pages/cuenta-contrasena/cuenta-contrasena.module').then( m => m.CuentaContrasenaPageModule)
+  },
+  {
+    path: 'chats-uno',
+    loadChildren: () => import('./pages/chats-uno/chats-uno.module').then( m => m.ChatsUnoPageModule)
+  },
+
  
   
 ];

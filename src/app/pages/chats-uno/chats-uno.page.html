@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button text=""></ion-back-button>
+        </ion-buttons>
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-avatar>
+            <p>Alejandro Salazar</p>
+        </ion-item>
+        <ion-buttons slot="end" (click)="mostrarPop($event)">
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-grid>
+        <ion-row *ngFor="let message of messages">
+            <ion-col size="9" *ngIf="currentUser !== message.user" class="message other-message">
+                <!--                 <b>{{message.user}}</b><br> -->
+                <span>{{message.msg}}</span>
+                <div class="time" style="color:black !important" text-right><br> {{message.createdAt | date:'short'}}
+                </div>
+            </ion-col>
+
+            <ion-col offset="3" size="9" *ngIf="currentUser === message.user" class="message my-message">
+                <!-- <b>{{message.user}}</b><br> -->
+                <span>{{message.msg}}</span>
+                <div class="time" text-right><br> {{message.createdAt | date:'short'}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<!-- <ion-footer>
+    <ion-item>
+        <ion-icon slot="end" color="primary" name="send-outline"></ion-icon>
+        <ion-input class="send ion-padding-start" placeholder="Escribe un mensaje"></ion-input>
+    </ion-item>
+</ion-footer> -->
+
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col size="10">
+                <textarea autosize maxRows="4" [(ngModel)]="newMsg" class="message-input" placeholder="Escribe tu mensaje"></textarea>
+            </ion-col>
+            <ion-col size="2">
+                <ion-button (click)="sendMessage()" expand="block" fill="clear" color="primary" [disabled]="newMsg === '' ">
+                    <ion-icon name="send-outline" slot="icon-only"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

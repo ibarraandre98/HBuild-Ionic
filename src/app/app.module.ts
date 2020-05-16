@@ -23,6 +23,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import {AutosizeModule} from 'ngx-autosize';
 
 @NgModule({
   declarations: [AppComponent,MenuComponent],
@@ -37,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireStorageModule,
     AngularFirestoreModule,
     HttpClientModule,
-    
+    AutosizeModule,
   ],
   providers: [
     StatusBar,

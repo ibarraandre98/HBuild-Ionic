@@ -1,5 +1,4 @@
-[
-    {
+[{
         "icon": "notifications-outline",
         "name": "Notificaciones",
         "href": "/"
@@ -7,7 +6,7 @@
     {
         "icon": "person-outline",
         "name": "Cuenta",
-        "href": "/"
+        "href": "/cuenta"
     },
     {
         "icon": "lock-closed-outline",

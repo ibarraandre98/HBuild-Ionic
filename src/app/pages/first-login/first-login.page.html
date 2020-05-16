@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+    <div class="center ion-padding ">
+        <div class="hb-padding">
+            <div class="hb-title">
+                <h1>Informacion</h1>
+                <p>Para continuar ingresa la siguiente información</p>
+            </div>
+            <form>
+                <div class="ion-margin-bottom">
+                    <ion-input required type="text" class="ion-padding-start" placeholder="Nombre"></ion-input>
+                </div>
+                <div class="ion-margin-bottom">
+                    <ion-input required type="text" class="ion-padding-start" placeholder="Apellidos"></ion-input>
+                </div>
+                <div class="ion-margin-bottom">
+                    <ion-input required type="text" class="ion-padding-start" placeholder="Telefono"></ion-input>
+                </div>
+                <div class="ion-margin-bottom">
+                    <ion-input required type="text" class="ion-padding-start" placeholder="Ciudad, Estado, País"></ion-input>
+                </div>
+                <div class="ion-margin-bottom">
+                    <ion-item>
+                        <ion-label>Actividad</ion-label>
+                        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                            <ion-select-option value="arquitecto">Arquitecto</ion-select-option>
+                            <ion-select-option value="civil">Ing. Civil</ion-select-option>
+                            <ion-select-option value="albañil">Albañil</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                </div>
+                <ion-button type="submit" expand="full" class="ion-margin-bottom">Completar</ion-button>
+            </form>
+        </div>
+    </div>
+</ion-content>
