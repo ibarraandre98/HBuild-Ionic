@@ -23,6 +23,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 
+//Plugins
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { File } from '@ionic-native/file/ngx'
+
 
 @NgModule({
   declarations: [AppComponent,MenuComponent],
@@ -43,7 +47,9 @@ import { HttpClientModule } from '@angular/common/http';
     StatusBar,
     SplashScreen,
     Toast,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    ImagePicker,
+    File
   ],
   bootstrap: [AppComponent]
 })

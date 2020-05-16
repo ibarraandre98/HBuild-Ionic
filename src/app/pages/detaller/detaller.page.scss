@@ -1,0 +1,41 @@
+ion-input[type="text"],
+ion-input[type="email"],
+ion-input[type="password"]
+{
+    display: block;
+    border: 0;
+}
+
+%center{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,0);
+}
+
+.profile{
+    @extend %center;
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+
+    & > *{
+        border: 5px solid #eaeaea;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        object-fit: cover;
+    }
+}
+
+.cover{
+    @extend %center;
+    width: 80%;
+    height: 30%;
+
+    & > *{
+        border: 5px solid #eaeaea;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

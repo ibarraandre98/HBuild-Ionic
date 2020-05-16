@@ -23,6 +23,20 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./pages/menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'crear',
+    loadChildren: () => import('./pages/crear/crear.module').then( m => m.CrearPageModule)
+  },
+  {
+    path: 'editar',
+    loadChildren: () => import('./pages/editar/editar.module').then( m => m.EditarPageModule),
+  }
+  ,
+  {
+    path: 'editar/detaller',
+    loadChildren: () => import('./pages/detaller/detaller.module').then(m => m.DetallerPageModule)
+  }
+
  
   
 ];

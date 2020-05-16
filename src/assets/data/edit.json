@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Foto de Perfil"
+    },
+    {
+        "id": 2,
+        "name": "Foto de Portada"
+    },
+    {
+        "id": 3,
+        "name": "Nombre"
+    },
+    {
+        "id": 4,
+        "name": "Descripción"
+    },
+    {
+        "id": 5,
+        "name": "Puesto"
+    },
+    {
+        "id": 6,
+        "name": "Telefono"
+    },
+    {
+        "id": 7,
+        "name": "Ubicación"
+    }
+]

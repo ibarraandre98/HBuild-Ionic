@@ -1,0 +1,42 @@
+[
+    {
+        "idPuesto" : 1,
+        "puesto" : "Constructor"
+    },
+    {
+        "idPuesto" : 2,
+        "puesto" : "Ingeniero"
+    },
+    {
+        "idPuesto" : 3,
+        "puesto" : "Arquitecto"
+    },
+    {
+        "idPuesto" : 4,
+        "puesto" : "Albañil"
+    },
+    {
+        "idPuesto" : 5,
+        "puesto" : "Decoración"
+    },
+    {
+        "idPuesto" : 6,
+        "puesto" : "Estudiante"
+    },
+    {
+        "idPuesto" : 7,
+        "puesto" : "Educación"
+    },
+    {
+        "idPuesto" : 8,
+        "puesto" : "Dibujante"
+    },
+    {
+        "idPuesto" : 9,
+        "puesto" : "Especialista"
+    },
+    {
+        "idPuesto" : 10,
+        "puesto" : "Otro"
+    }
+]
