@@ -1,79 +1,37 @@
-<!-- <ion-header>
+<ion-header>
   <ion-toolbar>
-    <ion-title>tab1</ion-title>
-    
+    <ion-buttons slot="end" (click)="salirSinArgumentos()">
+      <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+    </ion-buttons>
+    <ion-title>Editar Publicación</ion-title>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content>
-
-  <div style="margin: 10px;">
-    <ion-grid>
-      <ion-row>
-        <ion-col size=2>
-          <ion-buttons (click)="salirSinArgumentos()">
-            <ion-icon name="chevron-back-outline"></ion-icon>
-          </ion-buttons>
-        </ion-col>
-        <ion-col>
-          <ion-label>
-            <p style="text-align: center; font-weight: bold;">Editar publicación</p>
-          </ion-label>
-        </ion-col>
-        <ion-col size=2>
-          <ion-buttons>
-            <ion-label>
-              <p style="color: rgb(255, 102, 0); text-align: right;">Guardar</p>
-            </ion-label>
-          </ion-buttons>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-
-
-
-
-  </div>
-
   <ion-list>
-
     <div>
-      <ion-grid>
-        <ion-row>
-          <ion-col size=2>
-            <ion-avatar style="width: 50px; height: 50px;">
-              <img class="usuario"
-                src="https://hips.hearstapps.com/vidthumb/images/quie-n-es-miles-morales-spiderman-un-nuevo-universo-1545383015.jpg">
-            </ion-avatar>
-          </ion-col>
-          <ion-col size=8>
-            <ion-label>
-              <p class="Texto1">Filiberto Salazar</p>
-            </ion-label>
-          </ion-col>
-
-        </ion-row>
-        <ion-label>
-          <p class="titulo">Mansion de 3 pisos de cristal</p>
-          <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,
-            deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt
-            libero cupiditate voluptatum impedit sequi dolor?</p>
-        </ion-label>
-        <ion-img style="margin-left:-5px; margin-right: -5px;"
-          src="https://planosdecasasmodernas.com/wp-content/uploads/2017/06/Casa-minimalista-fachada-una-planta.jpg">
-        </ion-img>
-
-      </ion-grid>
+      <ion-label class="ion-margin">
+        <p class="titulo">Mansion de 3 pisos de cristal</p>
+        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,
+          deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt
+          libero cupiditate voluptatum impedit sequi dolor?</p>
+      </ion-label>
+      <div class="edit-img">
+        <ion-icon class="edit" name="create-outline"></ion-icon>
+        <ion-img 
+        src="https://planosdecasasmodernas.com/wp-content/uploads/2017/06/Casa-minimalista-fachada-una-planta.jpg">
+      </ion-img>
+      </div>
     </div>
   </ion-list>
 </ion-content>
 
-<ion-footer class="ion-no-border comentarios">
+<ion-footer>
   <ion-toolbar>
-    <ion-label slot="end">
-      <p style="margin-right: 10px;">Editar foto</p>
-    </ion-label>
-    <ion-icon slot="end" name="image"></ion-icon>
+    <ion-buttons slot="end"  (click)="salirSinArgumentos()">
+      <ion-button>
+        Guardar
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-footer>

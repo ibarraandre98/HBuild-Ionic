@@ -1,19 +1,30 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonTabs, PopoverController, ModalController } from '@ionic/angular';
+import { PopoverController, ModalController, IonSegment } from '@ionic/angular';
 import { PopTab1Component } from 'src/app/components/pop-tab1/pop-tab1.component';
 import { PublicacionEditarPage } from '../publicacion-editar/publicacion-editar.page';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: './tab2.page.html',
   styleUrls: ['./tab2.page.scss'],
 })
 export class Tab2Page implements OnInit {
+
+  @ViewChild(IonSegment, {static: true}) Button: IonSegment;
+  tab: any;
+
   constructor(private popCtrl: PopoverController,
     private modalCtrl: ModalController
     ) { }
 
   ngOnInit() {
+    this.Button.value="personas";
+    this.tab = "personas";
+  }
 
+  segmentChanged(event){
+    const valorSegment = event.detail.value;
+    this.tab = valorSegment;
   }
 
   async mostrarPop(evento) {

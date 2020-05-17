@@ -1,19 +1,68 @@
-.usuario {
-    margin-left: 10px;
+%reset{
+    margin: 0;
+    padding: 0;
 }
 
-.Texto1 {
-    margin-top: 5px;
+%generalFont{
+    font-size: 14px;
+}
+
+%iconsColor{
+    color: #a0a0a0;
+}
+
+$principal-color: #FF6600;
+
+.content{
+    margin-top: 10px;
+    border-bottom: 10px solid #eaeaea;
+}
+
+p{
+    @extend %generalFont;
+}
+
+#name{
     font-weight: bold;
-    padding-left: 8px;
     color: black;
 }
 
-.Texto2 {
+.elipsis{
+    @extend %iconsColor;
+}
+
+.img-description{
+    position: relative;
+
+    .p-description{
+        @extend %reset;
+        position: absolute;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        bottom: 0;
+        padding: 20px;
+        color: white;
+        background-color: $principal-color;
+    }
+}
+
+.col-height{
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.show{
+    @extend %iconsColor;
+    font-size: 20px;
+}
+
+.number{
+    @extend %generalFont;
+    @extend %iconsColor;
     margin-left: 8px;
 }
 
-.descripcion {
-    padding: 12px;
-}
+
 

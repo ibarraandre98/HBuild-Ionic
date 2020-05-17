@@ -1,17 +1,4 @@
-.usuario {
-    margin-left: 10px;
-}
 
-.Texto1 {
-    margin-top: 5px;
-    font-weight: bold;
-    padding-left: 8px;
-    color: black;
-}
-
-.Texto2 {
-    margin-left: 8px;
-}
 
 .titulo{
     margin: 8px;
@@ -24,16 +11,23 @@
     padding-bottom: 5px;
 }
 
-.comentarios {
-    padding: 5px;
-   
+.edit-img{
+    position: relative;
 
-}
+     &::before{
+         position: absolute;
+         content: '';
+         width: 100%;
+         height: 100%;
+         background-color: rgba($color: #eaeaea, $alpha: 0.7);
+     }
 
-.comentar {
-    border-style: solid;
-    border-radius: 9px;
-    border-color: rgb(155, 155, 155);
-    border-width: 1px 1px;
-    /* 5px top and bottom, 20px on the sides */
+     .edit{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         color: #8b8b8b;
+         font-size: 100px;
+     }
 }
