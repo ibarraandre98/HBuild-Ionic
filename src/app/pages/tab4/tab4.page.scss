@@ -1,0 +1,178 @@
+$principal-color: #ff6600;
+$secondary-color: #8b8b8b;
+
+*{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+ion-avatar{
+    width: 100px;
+    height: 100px;
+}
+
+ion-slide{
+    width: 125px;
+    height: 200px;
+    margin: 0 10px;
+}
+
+%reset{
+    margin: 0;
+    padding: 0;
+}
+
+%loading{
+    background: linear-gradient(
+        to right, #cacaca, #fff);
+    background-size: 400%;
+    animation: animate 500ms linear infinite alternate;
+}
+
+%avatar{
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+}
+
+%center{
+    @extend %reset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%text-size{
+    font-size: 12px;
+}
+
+@mixin margin($valueY, $valueX){
+    margin: $valueY $valueX;
+}
+
+@mixin padding($valueY, $valueX){
+    padding: $valueY $valueX;
+}
+
+@keyframes animate{
+    from{ background-position: 0% 50%; }
+    to{ background-position: 100% 50%; }
+}
+
+@keyframes animateEnter{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+.principal-text{
+    color: $principal-color;
+}
+
+.secondary-text{
+    color: $secondary-color;
+}
+
+.default-cover{
+    height: 30%;
+    @extend %loading;
+}
+
+.cover{
+    position: relative;
+    height: 30%;
+
+    .img-cover{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.profile{
+    position: relative;
+    top: -50px;
+}
+
+.default-avatar{
+    @extend %avatar;
+    @extend %loading;
+}
+
+.avatar{
+    @extend %avatar;
+    object-fit: cover;
+    animation: animateEnter 500ms;
+}
+
+.show{
+    animation: animateEnter 500ms;
+}
+
+.center{
+    @extend %center;
+}
+
+.center-column{
+    @extend %center;
+    flex-direction: column;
+}
+
+.title{
+    @extend %reset;
+    @include margin(10px, 0);
+    font-weight: 600;
+}
+
+.subtitle{
+    @extend %reset;
+    @extend %text-size;
+    @include padding(0, 10px);
+    color: $secondary-color;
+}
+
+.text-size{
+    @extend %text-size;
+}
+
+.lines{
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.fit{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+
+    &::before{
+        content: '';
+        position: absolute;
+        border-radius: inherit;
+        width: inherit;
+        height: inherit;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to top, $principal-color, white);
+        opacity: .7;
+    }
+
+    .text-fit{
+        padding: 5px;
+        position: absolute;
+        color: white;
+        text-shadow: 0px 0px 5px black;
+        bottom: 10px;
+        overflow: hidden;
+    }
+
+    .fit-img{
+        object-fit: cover;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+    }
+}

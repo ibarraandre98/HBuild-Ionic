@@ -24,6 +24,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
 
+//Plugins
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { File } from '@ionic-native/file/ngx'
+
 
 import {AutosizeModule} from 'ngx-autosize';
 
@@ -46,7 +50,9 @@ import {AutosizeModule} from 'ngx-autosize';
     StatusBar,
     SplashScreen,
     Toast,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    ImagePicker,
+    File
   ],
   bootstrap: [AppComponent]
 })

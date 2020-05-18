@@ -1,0 +1,36 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu/tab4"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear publicacion</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary">Crear</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input type="text" placeholder="Titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Descripción"></ion-textarea>
+    </ion-item>
+  </ion-list>
+    <ion-item>
+      <img src="{{images}}">
+    </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="PickMultipleImages()" color="primary">
+        <ion-icon name="images-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

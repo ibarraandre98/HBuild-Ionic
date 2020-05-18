@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu/tab4"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item detail [routerLink]="['/editar/detaller', '1']">
+      <ion-label>
+        <h2>Foto de perfil</h2>
+        <p>Edita tu foto de perfil</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '2']">
+      <ion-label>
+        <h2>Foto de portada</h2>
+        <p>Edita tu foto de portada</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '3']">
+      <ion-label>
+        <h2>Nombre</h2>
+        <p>Andre Ibarra Perez</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '4']">
+      <ion-label>
+        <h2>Descripción</h2>
+        <p>Lorem ipsum...</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '5']">
+      <ion-label>
+        <h2>Puesto</h2>
+        <p>Usuario</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '6']">
+      <ion-label>
+        <h2>Telefono</h2>
+        <p>8311234567</p>
+      </ion-label>
+    </ion-item>
+    <ion-item detail [routerLink]="['/editar/detaller', '7']">
+      <ion-label>
+        <h2>Ubicación</h2>
+        <p>El Mante Tamaulipas</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

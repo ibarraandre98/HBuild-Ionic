@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/editar"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="datos">{{datos.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="guardar(datos.id)">Guardar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="datos">
+
+      <div *ngIf="datos.id == 1">
+        <div class="profile" *ngIf="image">
+          <img (click)="selectImage()" src="{{image}}">
+        </div>
+      </div> 
+
+      <div *ngIf="datos.id == 2">
+        <div class="cover" *ngIf="image">
+          <img (click)="selectImage()" src="{{image}}">
+        </div>
+      </div>
+
+    <ion-item *ngIf="datos.id == 3" lines="full">
+      <ion-input type="text" value="Nombre de ejemplo"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="datos.id == 4" lines="full">
+      <ion-textarea value="Descripción de ejemplo"></ion-textarea>
+    </ion-item>
+
+    <div *ngIf="datos.id == 5" >
+      <ion-skeleton-text *ngIf="!places" animated style="width: 100%; height: 20px;"></ion-skeleton-text>
+      <ion-item *ngIf="places">
+        <ion-label>Puesto</ion-label>
+        <ion-select>
+          <ion-select-option value="{{place.idPuesto}}" *ngFor="let place of places">
+            {{place.puesto}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <ion-item *ngIf="datos.id == 6" lines="full">
+      <ion-input type="number" value="8311234567"></ion-input>
+    </ion-item>
+
+    <div *ngIf="datos.id == 7">
+      <ion-item *ngIf="city">
+        <ion-label>Estado</ion-label>
+        <ion-select (ionChange)="getTowns($event)">
+          <ion-select-option value="{{citi.estado}}" *ngFor="let citi of city">
+            {{citi.estado}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="city">
+        <ion-label>Ciudad</ion-label>
+        <ion-select [disabled]="!ban">
+          <ion-select-option value="{{i}}" *ngFor="let ciudad of town; let i = index">
+            {{ciudad}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+  </div>
+</ion-content>

@@ -43,6 +43,19 @@ const routes: Routes = [
     path: 'chats-uno',
     loadChildren: () => import('./pages/chats-uno/chats-uno.module').then( m => m.ChatsUnoPageModule)
   },
+  {
+    path: 'crear',
+    loadChildren: () => import('./pages/crear/crear.module').then( m => m.CrearPageModule)
+  },
+  {
+    path: 'editar',
+    loadChildren: () => import('./pages/editar/editar.module').then( m => m.EditarPageModule),
+  }
+  ,
+  {
+    path: 'editar/detaller',
+    loadChildren: () => import('./pages/detaller/detaller.module').then(m => m.DetallerPageModule)
+  }
 
  
   
