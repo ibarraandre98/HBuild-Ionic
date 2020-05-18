@@ -1,9 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>personas</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<div *ngIf="show">
+  <ion-item *ngFor="let i of [1,1,1,1,1]"  lines="full">
+    <ion-skeleton-text slot="start" animated style="width: 50px; height: 50px;">
+    </ion-skeleton-text>
+    <ion-label>
+      <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 20%;"></ion-skeleton-text>
+    </ion-label>
+  </ion-item>
+</div>
+<div *ngIf="!show">
+  <ion-item routerLink="/profile" lines="full" detail>
+    <ion-avatar slot="start">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbofVMXQRL-ArEcs_D4YsHh5cUV1MnTeZVtDHF3w68IOnMoZ5M&usqp=CAU">
+    </ion-avatar>
+    <ion-label>
+      <p class="name">Miguel Gonzalez</p>
+      <p>Arquitecto</p>
+    </ion-label>
+  </ion-item>
+</div>

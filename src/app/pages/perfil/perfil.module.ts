@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PersonasPageRoutingModule } from './personas-routing.module';
+import { PerfilPageRoutingModule } from './perfil-routing.module';
 
-import { PersonasPage } from './personas.page';
+import { PerfilPage } from './perfil.page';
 
 @NgModule({
   exports: [
-    PersonasPage
+    PerfilPage
   ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PersonasPageRoutingModule
+    PerfilPageRoutingModule
   ],
-  declarations: [PersonasPage]
+  declarations: [PerfilPage]
 })
-export class PersonasPageModule {}
+export class PerfilPageModule {}

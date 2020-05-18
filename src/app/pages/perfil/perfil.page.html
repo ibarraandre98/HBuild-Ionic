@@ -1,0 +1,91 @@
+<ion-img *ngIf="!show" class="default-cover"></ion-img>
+  <div class="show cover" *ngIf="show">
+    <img class="img-cover" [src]="cover">
+  </div>
+
+  <div class="profile">
+    <div class="center">
+      <ion-avatar>
+        <div *ngIf="!show" class="default-avatar"></div>
+        <img *ngIf="show" class="avatar" [src]="usuario.imagen">
+      </ion-avatar>
+    </div>
+
+    <!-- skeleton -->
+    <div *ngIf="!show" class="skeleton">
+      <div class="center-column">
+        <ion-skeleton-text class="ion-margin-top ion-justify-content-center" animated style="width: 80%">
+        </ion-skeleton-text>
+        <ion-skeleton-text class="ion-margin ion-justify-content-center" animated style="width: 60%">
+        </ion-skeleton-text>
+        <ion-skeleton-text class="ion-justify-content-center" animated style="width: 40%"></ion-skeleton-text>
+      </div>
+      <ion-item class="ion-margin-top lines" lines="none">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-items-center">
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 40%"></ion-skeleton-text>
+            </ion-col>
+            <ion-col class="ion-align-items-center">
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 40%"></ion-skeleton-text>
+            </ion-col>
+            <ion-col class="ion-align-items-center">
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 60%"></ion-skeleton-text>
+              <ion-skeleton-text class="ion-justify-content-center" animated style="width: 40%"></ion-skeleton-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-skeleton-text animated style="width: 125px; height: 200px; margin: 10px; float: left;"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 125px; height: 200px; margin: 10px; float: left;"></ion-skeleton-text>
+    </div>
+
+    <!---->
+    <div *ngIf="show" class="show">
+      <div class="ion-text-center">
+        <h3 class="title">Andre Ibarra Perez</h3>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate omnis optio
+          debitis
+          labore ipsam nesciunt.</p>
+      </div>
+      <ion-grid class="ion-margin">
+        <ion-row *ngIf="have == 'true'">
+          <ion-col size="9"><ion-button class=" text-size" routerLink="/crear" expand="block" shape="round" color="primary">Crear publicación</ion-button></ion-col>
+          <ion-col size="3"><ion-button class=" text-size" routerLink="/editar" expand="block" shape="round" color="medium"><ion-icon name="settings-outline"></ion-icon></ion-button></ion-col>
+        </ion-row>
+        <ion-row *ngIf="have == 'false'">
+          <ion-col size="6"><ion-button class=" text-size" routerLink="/profile" expand="block" shape="round" color="primary">Seguir</ion-button></ion-col>
+          <ion-col size="6"><ion-button class=" text-size" routerLink="/chats-uno" expand="block" shape="round" color="medium">Mensaje</ion-button></ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-item class="lines" lines="none">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="ion-align-items-center">
+              <p class="ion-text-center text-size ion-no-margin secondary-text">Publicaciones</p>
+              <p class="ion-text-center text-size ion-no-margin principal-text">8</p>
+            </ion-col>
+            <ion-col class="ion-align-items-center">
+              <p class="ion-text-center text-size ion-no-margin secondary-text">Puesto</p>
+              <p class="ion-text-center text-size ion-no-margin principal-text">Arquitecto</p>
+            </ion-col>
+            <ion-col class="ion-align-items-center">
+              <p class="ion-text-center text-size ion-no-margin secondary-text">Me gusta</p>
+              <p class="ion-text-center text-size ion-no-margin principal-text">0</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-slides class="ion-margin-top" [options]="slideOpts">
+        <ion-slide *ngFor="let card of [0,1,2,3,4,5,6]">
+          <div class="fit">
+            <p class="text-fit">Lorem ipsum sit amet</p>
+            <img class="fit-img" src="../../assets/example.jpg">
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>

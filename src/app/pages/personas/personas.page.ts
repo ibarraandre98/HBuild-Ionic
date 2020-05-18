@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonasPage implements OnInit {
 
+  show: boolean = true;
   constructor() { }
 
   ngOnInit() {
+    setTimeout( () => {
+      this.show = false;
+    }, 1500);
   }
 
 }

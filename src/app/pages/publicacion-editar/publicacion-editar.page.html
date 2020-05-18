@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header mode="ios">
   <ion-toolbar>
     <ion-buttons slot="end" (click)="salirSinArgumentos()">
       <ion-icon name="close-outline" slot="icon-only"></ion-icon>
@@ -9,20 +9,21 @@
 
 <ion-content>
   <ion-list>
-    <div>
-      <ion-label class="ion-margin">
-        <p class="titulo">Mansion de 3 pisos de cristal</p>
-        <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,
-          deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt
-          libero cupiditate voluptatum impedit sequi dolor?</p>
-      </ion-label>
-      <div class="edit-img">
+    <ion-list lines="full" class="ion-padding">
+      <ion-item>
+        <ion-label position="stacked">Titulo</ion-label>
+        <ion-input value="Mansion de 3 pisos de cristal"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-textarea class="ion-padding-horizontal" autoGrow value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt libero cupiditate voluptatum impedit sequi dolor?"></ion-textarea>
+      <div class="edit-img" (click)="editImg()">
         <ion-icon class="edit" name="create-outline"></ion-icon>
         <ion-img 
-        src="https://planosdecasasmodernas.com/wp-content/uploads/2017/06/Casa-minimalista-fachada-una-planta.jpg">
+        [src]="image">
       </ion-img>
       </div>
-    </div>
+    
   </ion-list>
 </ion-content>
 

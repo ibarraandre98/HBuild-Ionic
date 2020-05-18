@@ -40,8 +40,7 @@ export class DetallerPage implements OnInit {
     this.plugins = new Plugins(loadingCtrl,
       toastCtrl,
       imagePicker,
-      file
-      );
+      file, null, null, null);
   }
 
   ngOnInit() {

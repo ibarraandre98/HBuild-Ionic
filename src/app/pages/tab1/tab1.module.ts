@@ -13,12 +13,15 @@ import { PopTab1Component } from 'src/app/components/pop-tab1/pop-tab1.component
 import { ComponentsModule } from 'src/app/components/components.module';
 import { PublicacionEditarPageModule } from '../publicacion-editar/publicacion-editar.module';
 import { PublicacionEditarPage } from '../publicacion-editar/publicacion-editar.page';
+import { InicioPageModule } from '../inicio/inicio.module';
 
 @NgModule({
   entryComponents: [
     PublicacionPage,
     PopTab1Component,
     PublicacionEditarPage,
+  ],
+  exports: [ Tab1Page
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import { PublicacionEditarPage } from '../publicacion-editar/publicacion-editar.
     PublicacionPageModule,
     PublicacionEditarPageModule,
     ComponentsModule,
+    InicioPageModule
   ],
   declarations: [Tab1Page]
 })

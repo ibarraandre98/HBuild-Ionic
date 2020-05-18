@@ -3,74 +3,20 @@
 </ion-header>
 <ion-toolbar>
   <ion-segment (ionChange)="segmentChanged($event)" mode="md" color="primary">
-
     <ion-segment-button value="personas">
-        <ion-label>Personas</ion-label>
+      <ion-label>Personas</ion-label>
     </ion-segment-button>
-
-    <ion-segment-button value="publicaciones"> 
-        <ion-label>Publicaciones</ion-label>
+    <ion-segment-button value="publicaciones">
+      <ion-label>Publicaciones</ion-label>
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>
 
- <ion-content fullscreen>
-   
-     <div class="ion-padding caja">
-             <ion-list *ngIf="tab == 'personas'">
-                 <ion-item detail *ngFor="let i of [1,1,1,1,1,1]">
-                     <ion-avatar slot="start">
-                         <img
-                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbofVMXQRL-ArEcs_D4YsHh5cUV1MnTeZVtDHF3w68IOnMoZ5M&usqp=CAU">
-                     </ion-avatar>
-                     <ion-label>
-                         <p id="name">Miguel Gonzalez</p>
-                         <p>Arquitecto</p>
-                     </ion-label>
-                 </ion-item>
-             </ion-list>
-             <ion-list *ngIf="tab == 'publicaciones'">
-              <div class="content" *ngFor="let i of [1,1,1,1,1]">
-                <ion-item lines="none">
-                  <ion-avatar slot="start" style="width: 50px; height: 50px;">
-                    <img src="https://hips.hearstapps.com/vidthumb/images/quie-n-es-miles-morales-spiderman-un-nuevo-universo-1545383015.jpg">
-                  </ion-avatar>
-                  <ion-label>
-                    <p id="name">Osiel Treto</p>
-                    <p>28/03/20 El Mante</p>
-                  </ion-label>
-                  <ion-buttons slot="end">
-                    <ion-button (click)="mostrarPop( $event )">
-                      <ion-icon class="elipsis" slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical">
-                      </ion-icon>
-                    </ion-button>
-                  </ion-buttons>
-                </ion-item>
-                <p class=" descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio sint,
-                  deleniti harum aspernatur tempore quos vitae similique alias doloremque inventore, ullam assumenda nesciunt
-                  libero cupiditate voluptatum impedit sequi dolor?</p>
-                  <div class="img-description">
-                    <p class="p-description">Titulo imagen</p>
-                    <ion-img src="https://planosdecasasmodernas.com/wp-content/uploads/2017/06/Casa-minimalista-fachada-una-planta.jpg"></ion-img>
-                  </div>
-                  
-                  <ion-grid class="ion-padding-vertical ion-margin-horizontal">
-                    <ion-row class="ion-justify-content-end">
-                      <ion-col class=" ion-no-padding" offset size="2">
-                        <ion-label class="col-height ion-no-margin">
-                          <ion-icon class="show" name="heart-outline"></ion-icon>
-                          <span class="number"> 9</span>
-                        </ion-label> 
-                      </ion-col>
-                      <ion-col class="ion-no-padding" size="2">
-                        <div class="col-height ion-no-margin">
-                          <ion-icon class="show" name="chatbox-outline" (click)="comentarios($event)"></ion-icon>
-                          <span class="number"> 9</span>
-                        </div>
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-              </div>
-              </ion-list>
-     </div>
- </ion-content>
+<ion-content fullscreen>
+  <div *ngIf="tab == 'personas'">
+    <app-personas></app-personas>
+  </div>
+  <div *ngIf="tab == 'publicaciones'">
+    <app-inicio></app-inicio>
+  </div>
+</ion-content>

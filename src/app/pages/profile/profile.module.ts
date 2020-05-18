@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab4PageRoutingModule } from './tab4-routing.module';
+import { ProfilePageRoutingModule } from './profile-routing.module';
 
-import { Tab4Page } from './tab4.page';
-import { PersonasPageModule } from '../personas/personas.module';
+import { ProfilePage } from './profile.page';
 import { PerfilPageModule } from '../perfil/perfil.module';
 
 @NgModule({
@@ -15,9 +14,9 @@ import { PerfilPageModule } from '../perfil/perfil.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab4PageRoutingModule,
+    ProfilePageRoutingModule,
     PerfilPageModule
   ],
-  declarations: [Tab4Page]
+  declarations: [ProfilePage]
 })
-export class Tab4PageModule {}
+export class ProfilePageModule {}

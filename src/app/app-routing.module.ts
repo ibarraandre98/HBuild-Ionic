@@ -50,15 +50,15 @@ const routes: Routes = [
   {
     path: 'editar',
     loadChildren: () => import('./pages/editar/editar.module').then( m => m.EditarPageModule),
-  }
-  ,
+  },
   {
     path: 'editar/detaller',
     loadChildren: () => import('./pages/detaller/detaller.module').then(m => m.DetallerPageModule)
+  },   {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   }
-
  
-  
 ];
 
 @NgModule({

@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab3Page implements OnInit {
 
+  show: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    setTimeout(()=> {
+      this.show = false;
+    }, 1500);
   }
  
 }

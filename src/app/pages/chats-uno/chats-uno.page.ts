@@ -1,7 +1,8 @@
 import { PopChatsUnoReportarComponent } from './../../components/pop-chats-uno-reportar/pop-chats-uno-reportar.component';
 import { PopChatsUnoComponent } from './../../components/pop-chats-uno/pop-chats-uno.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent, PopoverController } from '@ionic/angular';
+import { IonContent, PopoverController, ModalController, ActionSheetController } from '@ionic/angular';
+import { Plugins } from 'src/app/models/plugins';
 
 
 @Component({
@@ -84,15 +85,18 @@ export class ChatsUnoPage implements OnInit {
       msg:'Doing some tutorial'
     }
   ];
-
+  plugin: Plugins;
   currentUser="muski";
   newMsg='';
+
   @ViewChild(IonContent,null) content:IonContent
 
   constructor(
     private popCtrl:PopoverController,
+    private modalCtrl: ModalController,
+    public actionSheetController: ActionSheetController
   ) {
-
+    this.plugin = new Plugins(null, null, null, null, this.actionSheetController, this.modalCtrl, this.popCtrl);
    }
 
   ngOnInit() {
