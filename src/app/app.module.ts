@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
 
 
+import {AutosizeModule} from 'ngx-autosize';
 
 @NgModule({
   declarations: [AppComponent,MenuComponent],
@@ -39,7 +40,7 @@ import { ComponentsModule } from './components/components.module';
     AngularFireStorageModule,
     AngularFirestoreModule,
     HttpClientModule,
-    
+    AutosizeModule,
   ],
   providers: [
     StatusBar,

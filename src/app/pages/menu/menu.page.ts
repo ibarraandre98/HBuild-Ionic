@@ -9,10 +9,14 @@ import { IonTabs } from '@ionic/angular';
 export class MenuPage implements OnInit {
 
   @ViewChild(IonTabs,{static:false}) tabs:IonTabs;
-  constructor() { }
+  constructor(
 
+  ) { }
+    
   ngOnInit() {
     console.log(this.tabs);
+    
   }
+
 
 }

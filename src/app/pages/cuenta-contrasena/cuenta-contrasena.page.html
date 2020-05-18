@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/cuenta"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Contraseña
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button color="primary">
+                Continuar
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-item lines="full">
+        <ion-input type="password" placeholder="Contraseña actual" ></ion-input>
+    </ion-item>
+</ion-content>

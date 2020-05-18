@@ -4,7 +4,7 @@ import {Router}from '@angular/router';
 import { ServicesService } from 'src/app/services/services.service';
 import { Observable } from 'rxjs';
 import { Menu } from 'src/app/interfaces/interfaces';
-import { IonMenu } from '@ionic/angular';
+import { IonMenu, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-menu',
@@ -17,8 +17,11 @@ export class MenuComponent implements OnInit {
 
   menu: Observable<Menu[]>;
 
-  constructor(private router:Router,
-     private dataService: ServicesService) { }
+  constructor(
+    private router:Router,
+     private dataService: ServicesService,
+     private menuController:MenuController,
+     ) { }
 
   ngOnInit() {
     console.log(this.ionMenu);
@@ -27,5 +30,8 @@ export class MenuComponent implements OnInit {
 
   Logout(){
       this.router.navigate(['/login']);
+  }
+  closeMenu(){
+    this.menuController.close();
   }
 }

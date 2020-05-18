@@ -1,0 +1,73 @@
+
+ion-input[type="text"],
+ion-input[type="email"],
+ion-input[type="password"]
+{
+    display: initial;
+    border: initial;
+    border-radius: 1em;
+    background-color: #eaeaea;
+    --padding-start: 10px
+}
+
+
+.avatar-chat{
+    position: relative;
+    left: 15px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+}
+
+.name-chat{
+    position: relative;
+    left: 20px;
+    & > p{
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.send {
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 10px;
+}
+
+
+
+.message {
+    padding: 2%;
+    padding-left: 4%;
+    white-space: pre-wrap;
+    margin-bottom: 2%;
+}
+
+.other-message {
+    background: rgb(224, 224, 224);
+    color: black;
+    border-radius: 30px 20px 20px 10px;
+}
+
+.my-message {
+    background: var(--ion-color-primary);
+    color: #fff;
+    border-radius: 20px 30px 10px 20px;
+}
+
+.time {
+    color: #dfdfdf;
+    float: right;
+    font-size: small;
+}
+
+.message-input {
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+    resize: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
