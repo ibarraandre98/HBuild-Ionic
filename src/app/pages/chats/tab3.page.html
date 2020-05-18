@@ -1,20 +1,24 @@
-<ion-content [fullscreen]="true" class="ion-padding">
-    <div class="search ion-padding-bottom">
-        <ion-item>
-            <ion-icon slot="start" name="search-outline"></ion-icon>
-            <ion-input placeholder="Buscar"></ion-input>
-        </ion-item>
+<ion-toolbar class="ion-padding-top" mode="ios">
+    <ion-searchbar placeholder="Buscar" (ionChange)="onSearchChange($event)"></ion-searchbar>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+    <div class="">
         <div class="chats">
-            <ion-list>
-                <ion-item routerLink="/chats-uno">
+            <ion-list> 
+                <ion-item class="messages" lines="none" routerLink="/chats-uno" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1]">
                     <ion-avatar slot="start">
                         <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
                     </ion-avatar>
-                    <ion-grid>
+                    <ion-label>
+                        <p class="name">Alejandro Salazar</p>
+                        <p>Hola! te interesa ganar dinero con 2 sencillas aplicaciones</p>
+                    </ion-label>
+                    <ion-note mode="md" slot="end">15/05/20</ion-note>
+                    <!-- <ion-grid>
                         <ion-row class="ion-align-items-start">
                             <ion-col size-xs="6">
                                 <ion-label>
-                                    <p>Alejandro Salazar</p>
+                                    <p class="name">Alejandro Salazar</p>
                                     <p>Hola! te interesa ganar dinero con 2 sencillas aplicaciones...</p>
                                 </ion-label>
                             </ion-col>
@@ -24,7 +28,7 @@
                                 </ion-label>
                             </ion-col>
                         </ion-row>
-                    </ion-grid>
+                    </ion-grid> -->
                 </ion-item>
             </ion-list>
         </div>

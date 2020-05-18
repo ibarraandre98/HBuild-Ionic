@@ -1,19 +1,25 @@
 <ion-header>
-    <ion-toolbar mode="ios">
+    <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button text=""></ion-back-button>
+            <ion-back-button defaultHref="/menu"></ion-back-button>
         </ion-buttons>
-        <ion-title text-left>Cuenta</ion-title>
+        <ion-title>Cuenta</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-    <div class="items-cuenta" routerLink="/cuenta-correo">
-        <p>Correo electrónico</p>
-        <p class="text-gray">sk8muski@gmail.com</p>
-    </div>
-    <div class="items-cuenta" routerLink="/cuenta-contrasena">
-        <p>Contraseña</p>
-        <p class="text-gray">****************</p>
-    </div>
+<ion-content>
+    <ion-list>
+        <ion-item lines="full" routerLink="/cuenta-correo"> 
+            <ion-label>
+                <h3>Correo electrónico</h3>
+                <p>sk8muski@gmail.com</p>
+            </ion-label>
+        </ion-item>
+        <ion-item lines="full" routerLink="/cuenta-contrasena">
+            <ion-label>
+                <h3>Contraseña</h3>
+                <p>Edita tu contraseña</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>

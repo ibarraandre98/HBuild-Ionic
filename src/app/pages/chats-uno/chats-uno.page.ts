@@ -11,6 +11,7 @@ import { IonContent, PopoverController } from '@ionic/angular';
 })
 export class ChatsUnoPage implements OnInit {
 
+
   messages = [
     {
       user: 'muski',
@@ -29,7 +30,59 @@ export class ChatsUnoPage implements OnInit {
       user: 'fili',
       createdAt: 1554090856000,
       msg:'JAJAJAJ'
-    },
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'fili',
+      createdAt: 1554090856000,
+      msg:'JAJAJAJ'
+    },{
+      user: 'muski',
+      createdAt: 1554090856000,
+      msg:'Doing some tutorial'
+    },{
+      user: 'muski',
+      createdAt: 1554090856000,
+      msg:'Doing some tutorial'
+    },{
+      user: 'muski',
+      createdAt: 1554090856000,
+      msg:'Doing some tutorial'
+    },{
+      user: 'muski',
+      createdAt: 1554090856000,
+      msg:'Doing some tutorial'
+    }
   ];
 
   currentUser="muski";
@@ -43,6 +96,7 @@ export class ChatsUnoPage implements OnInit {
    }
 
   ngOnInit() {
+    this.content.scrollToBottom();
   }
 
   sendMessage(){

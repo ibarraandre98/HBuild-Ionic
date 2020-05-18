@@ -1,9 +1,9 @@
 <ion-header>
-    <ion-toolbar mode="ios">
+    <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button text=""></ion-back-button>
+            <ion-back-button defaultHref="/cuenta"></ion-back-button>
         </ion-buttons>
-        <p>Correo electrónico</p>
+        <ion-title>Correo electrónico</ion-title>
         <ion-buttons slot="end">
             <ion-button color="primary">
                 Guardar
@@ -12,13 +12,9 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-    <div class="items-cuenta">
-        <p>Actual</p>
-        <p class="text-gray">sk8muski@gmail.com</p>
-    </div>
-    <div class="items-cuenta">
-        <p>Nuevo</p>
-        <ion-input></ion-input>
-    </div>
+<ion-content class="ion-padding">
+        <ion-item lines="full">
+            <ion-input value="sk8muski@gmail.com"></ion-input>
+        </ion-item>
+
 </ion-content>

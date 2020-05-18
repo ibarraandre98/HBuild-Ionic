@@ -1,24 +1,21 @@
 <ion-header>
     <ion-toolbar mode="ios">
         <ion-buttons slot="start">
-            <ion-back-button text=""></ion-back-button>
+            <ion-back-button defaultHref="/cuenta"></ion-back-button>
         </ion-buttons>
-        <p>Contraseña</p>
+        <ion-title>
+            Contraseña
+        </ion-title>
         <ion-buttons slot="end">
             <ion-button color="primary">
-                Guardar
+                Continuar
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-    <div class="items-cuenta">
-        <p>Actual</p>
-        <p class="text-gray">**************</p>
-    </div>
-    <div class="items-cuenta">
-        <p>Nueva</p>
-        <ion-input></ion-input>
-    </div>
+    <ion-item lines="full">
+        <ion-input type="password" placeholder="Contraseña actual" ></ion-input>
+    </ion-item>
 </ion-content>
